@@ -1,0 +1,1624 @@
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .header {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .header h1 {
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .nav-tab {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        padding: 12px 24px;
+        border-radius: 25px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-tab:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+
+    .nav-tab.active {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .tab-content {
+        display: none;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .tab-content.active {
+        display: block;
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .login-container {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .discord-login {
+        background: #5865F2;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .discord-login:hover {
+        background: #4752C4;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1em;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: all 0.3s ease;
+        margin: 5px;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-danger {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    }
+
+    .btn-success {
+        background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+    }
+
+    .registration-card {
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 20px;
+        border: 2px solid #e0e7ff;
+        text-align: center;
+    }
+
+    .registration-status {
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .status-registered {
+        color: #10b981;
+    }
+
+    .status-not-registered {
+        color: #6b7280;
+    }
+
+    .admin-section {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-left: 4px solid #667eea;
+    }
+
+    .job-button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .job-button {
+        background: #e0e7ff;
+        border: 2px solid #667eea;
+        border-radius: 8px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+    }
+
+    .job-button:hover {
+        background: #667eea;
+        color: white;
+    }
+
+    .job-members {
+        display: none;
+        margin-top: 10px;
+        padding: 10px;
+        background: #f0f4ff;
+        border-radius: 8px;
+    }
+
+    .job-members.active {
+        display: block;
+    }
+
+    .member-id {
+        display: inline-block;
+        font-size: 0.8em;
+        color: #666;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .member-id:hover {
+        color: #667eea;
+        text-decoration: underline;
+    }
+
+    .battle-formation {
+        margin: 20px 0;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .team-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-table th,
+    .team-table td {
+        border: 1px solid #e0e0e0;
+        padding: 12px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .team-table th {
+        background: #667eea;
+        color: white;
+        font-weight: 600;
+    }
+
+    .team-table td select {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        background: #f8f9fa;
+    }
+
+    .team-table td select:disabled {
+        background: #e8f5e8;
+        color: #333;
+    }
+
+    .team-table.readonly td {
+        background: #f0f4ff;
+    }
+
+    .calendar-container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .calendar-day {
+        aspect-ratio: 1;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: white;
+    }
+
+    .calendar-day:hover {
+        border-color: #667eea;
+        background: #f0f4ff;
+    }
+
+    .calendar-day.selected {
+        background: #667eea;
+        color: white;
+    }
+
+    .calendar-day.has-event {
+        background: #e8f5e8;
+        border-color: #51cf66;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .stats-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        border: 2px solid #e0e0e0;
+        text-align: center;
+    }
+
+    .stats-number {
+        font-size: 2em;
+        font-weight: 600;
+        color: #667eea;
+        margin-bottom: 10px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+    }
+
+    .modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+        animation: modalSlideIn 0.3s ease-out;
+    }
+
+    @keyframes modalSlideIn {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: #999;
+    }
+
+    .close-modal:hover {
+        color: #333;
+    }
+
+    .user-info {
+        background: #f0f4ff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+        z-index: 1001;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    .notification.success {
+        background: #10b981;
+    }
+
+    .notification.error {
+        background: #ef4444;
+    }
+
+    .notification.info {
+        background: #3b82f6;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+
+        .team-table {
+            font-size: 0.8em;
+        }
+
+        .team-table th,
+        .team-table td {
+            padding: 8px;
+        }
+
+        .nav-tabs {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-tab {
+            width: 200px;
+        }
+
+        .job-button-group {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .job-button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>
+
+    <!-- 登入頁面 -->
+    <div id="loginPage" class="tab-content active">
+        <div class="login-container">
+            <h2>歡迎使用幫戰報名系統</h2>
+            <p>請使用Discord帳號登入以確保身份驗證</p>
+            <div class="form-group">
+                <label>測試模式：選擇用戶類型</label>
+                <select id="loginTypeSelect">
+                    <option value="user">普通用戶</option>
+                    <option value="admin">管理員</option>
+                </select>
+            </div>
+            <button onclick="discordLogin()" class="discord-login">
+                🎮 使用Discord登入
+            </button>
+            <div id="newUserForm" style="display: none; margin-top: 30px;">
+                <h3>首次登入設定</h3>
+                <div class="form-group">
+                    <label>遊戲ID:</label>
+                    <input type="text" id="gameId" placeholder="請輸入您的遊戲ID">
+                </div>
+                <div class="form-group">
+                    <label>職業:</label>
+                    <select id="jobSelect">
+                        <option value="">請選擇職業</option>
+                        <option value="素問">素問</option>
+                        <option value="血河">血河</option>
+                        <option value="九靈">九靈</option>
+                        <option value="龍吟">龍吟</option>
+                        <option value="碎夢">碎夢</option>
+                        <option value="神相">神相</option>
+                        <option value="鐵衣">鐵衣</option>
+                    </select>
+                </div>
+                <button onclick="completeRegistration()" class="btn">完成註冊</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 導航標籤 -->
+    <div id="mainNav" class="nav-tabs" style="display: none;">
+        <button class="nav-tab active" onclick="showTab('home')">首頁</button>
+        <button class="nav-tab" onclick="showTab('applications')">申請專區</button>
+        <button class="nav-tab" onclick="showTab('records')">出勤紀錄</button>
+        <button id="adminTab" class="nav-tab" onclick="showTab('admin')" style="display: none;">管理員</button>
+    </div>
+
+    <!-- 首頁 -->
+    <div id="home" class="tab-content">
+        <div class="registration-card">
+            <h2>📅 幫戰報名狀態</h2>
+            <div id="registrationStatus" class="registration-status status-not-registered">
+                目前沒有開放的幫戰報名
+            </div>
+            <div id="registrationDate" style="font-size: 1.1em; margin-bottom: 10px;"></div>
+            <div id="registrationDeadline" style="font-size: 1em; margin-bottom: 10px;"></div>
+            <div id="teamAssignment" style="font-size: 1em; margin-bottom: 10px;"></div>
+            <div id="registrationActions">
+                <button id="registerBtn" onclick="registerForBattle()" class="btn"
+                    style="display: none;">報名參戰</button>
+                <button id="cancelBtn" onclick="cancelRegistration()" class="btn btn-danger"
+                    style="display: none;">取消報名</button>
+                <div id="deadlineMessage" style="color: #ef4444; margin-top: 10px; display: none;">
+                    如需要更動，請直接DC聯絡指揮
+                </div>
+            </div>
+        </div>
+
+        <div id="battleFormation" style="display: none;">
+            <h3>📋 出戰表</h3>
+            <div id="formationDisplay"></div>
+        </div>
+    </div>
+
+    <!-- 申請專區 -->
+    <div id="applications" class="tab-content">
+        <div class="admin-section">
+            <h3>🔄 更換職業申請</h3>
+            <div class="form-group">
+                <label>新職業:</label>
+                <select id="newJobSelect">
+                    <option value="">請選擇新職業</option>
+                    <option value="素問">素問</option>
+                    <option value="血河">血河</option>
+                    <option value="九靈">九靈</option>
+                    <option value="龍吟">龍吟</option>
+                    <option value="碎夢">碎夢</option>
+                    <option value="神相">神相</option>
+                    <option value="鐵衣">鐵衣</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>申請理由:</label>
+                <textarea id="jobChangeReason" placeholder="請說明更換職業的原因" rows="3"></textarea>
+            </div>
+            <button onclick="submitJobChange()" class="btn">提交申請</button>
+        </div>
+
+        <div class="admin-section">
+            <h3>👥 代報名系統</h3>
+            <div class="form-group">
+                <label>代報名ID:</label>
+                <input type="text" id="proxyId" placeholder="請輸入要代報名的遊戲ID">
+            </div>
+            <div class="form-group">
+                <label>代報名原因:</label>
+                <textarea id="proxyReason" placeholder="請說明代報名的原因" rows="3"></textarea>
+            </div>
+            <button onclick="submitProxyRegistration()" class="btn">提交代報名</button>
+        </div>
+
+        <div class="admin-section">
+            <h3>🏥 請假申請</h3>
+            <div class="form-group">
+                <label>請假日期:</label>
+                <input type="date" id="leaveDate">
+            </div>
+            <div class="form-group">
+                <label>請假原因（可空白）:</label>
+                <textarea id="leaveReason" placeholder="請說明請假原因" rows="3"></textarea>
+            </div>
+            <button id="leaveSubmitBtn" onclick="submitLeaveRequest()" class="btn">提交請假申請</button>
+            <div id="leaveDeadlineMessage" style="color: #ef4444; margin-top: 10px; display: none;">
+                如需要請假，請直接DC聯絡指揮
+            </div>
+        </div>
+    </div>
+
+    <!-- 出勤紀錄 -->
+    <div id="records" class="tab-content">
+        <h2>📊 我的出勤紀錄</h2>
+        <div class="stats-grid">
+            <div class="stats-card">
+                <div class="stats-number" id="attendanceRate">0%</div>
+                <div>出勤率</div>
+            </div>
+            <div class="stats-card">
+                <div class="stats-number" id="totalBattles">0</div>
+                <div>總參戰次數</div>
+            </div>
+            <div class="stats-card">
+                <div class="stats-number" id="absenceCount">0</div>
+                <div>缺席次數</div>
+            </div>
+        </div>
+        <div id="recordsList"></div>
+    </div>
+
+    <!-- 管理員面板 -->
+    <div id="admin" class="tab-content">
+        <div class="admin-section">
+            <h3>📅 開放報名日期</h3>
+            <div class="form-group">
+                <label>幫戰日期:</label>
+                <input type="date" id="battleDate">
+            </div>
+            <div class="form-group">
+                <label>幫戰時間:</label>
+                <select id="battleTime">
+                    <option value="14:00">14:00</option>
+                    <option value="20:00">20:00</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>報名截止日期:</label>
+                <input type="date" id="deadlineDate">
+            </div>
+            <div class="form-group">
+                <label>報名截止時間:</label>
+                <select id="deadlineTime">
+                    <option value="12:00">12:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="23:59">23:59</option>
+                </select>
+            </div>
+            <button onclick="openRegistration()" class="btn">開放報名</button>
+            <button onclick="closeRegistration()" class="btn btn-danger">關閉報名</button>
+        </div>
+
+        <div class="admin-section">
+            <h3>👥 成員管理</h3>
+            <div class="job-button-group" id="jobButtonGroup"></div>
+        </div>
+
+        <div class="admin-section">
+            <h3>⚔️ 出戰表部署</h3>
+            <div class="form-group">
+                <button onclick="showFormationEditor('edit')" class="btn">編輯出戰表</button>
+                <button onclick="publishFormation()" class="btn btn-success">發佈出戰表</button>
+                <button onclick="showFormationEditor('confirm')" class="btn btn-success">確認最終出戰表</button>
+            </div>
+            <div id="formationEditor" style="display: none;">
+                <div class="battle-formation" id="battleFormation"></div>
+                <div id="formationActions" style="text-align: center; margin-top: 20px;">
+                    <button id="confirmFormationBtn" onclick="confirmFinalFormation()" class="btn btn-success" style="display: none;">確認最終出戰表</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <h3>📊 統計報表</h3>
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <div class="stats-number" id="totalMembers">0</div>
+                    <div>總成員數</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-number" id="registeredCount">0</div>
+                    <div>已報名人數</div>
+                </div>
+                <div class="stats-card">
+                    <div class="stats-number" id="onLeaveCount">0</div>
+                    <div>請假人數</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 模態框 -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <button class="close-modal" onclick="closeModal()">×</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script>
+    // 系統狀態
+    let currentUser = null;
+    let isLoggedIn = false;
+    let currentBattle = null;
+    let battles = [];
+    let members = [];
+    let battleFormation = [];
+    let registrations = [];
+    let leaveRequests = [];
+    let attendanceRecords = [];
+
+    // 初始化成員數據
+    const initialMembers = [
+        { id: 'player001', discordId: 'admin_user1', name: '勇者', job: '素問', isAdmin: true, onLeave: false },
+        { id: 'player002', discordId: 'user2', name: '法師', job: '血河', isAdmin: false, onLeave: false },
+        { id: 'player003', discordId: 'user3', name: '弓手', job: '九靈', isAdmin: false, onLeave: false },
+        { id: 'player004', discordId: 'user4', name: '牧師', job: '龍吟', isAdmin: false, onLeave: false },
+        { id: 'player005', discordId: 'user5', name: '盜賊', job: '碎夢', isAdmin: false, onLeave: false },
+        { id: 'player006', discordId: 'user6', name: '騎士', job: '神相', isAdmin: false, onLeave: false },
+        { id: 'player007', discordId: 'user7', name: '戰士', job: '鐵衣', isAdmin: false, onLeave: false }
+    ];
+
+    // 職業列表
+    const jobs = ['素問', '血河', '九靈', '龍吟', '碎夢', '神相', '鐵衣'];
+
+    // 團隊名稱
+    const teamNames = ['進攻隊', '防守隊', '機動隊', '空拆隊', '拆塔隊'];
+
+    // 初始化系統
+    function initSystem() {
+        members = [...initialMembers];
+        updateJobButtonGroup();
+        updateStats();
+    }
+
+    // Discord登入模擬
+    function discordLogin() {
+        showNotification('正在連接Discord...', 'info');
+        setTimeout(() => {
+            const loginType = document.getElementById('loginTypeSelect').value;
+            let mockDiscordUser;
+            if (loginType === 'admin') {
+                mockDiscordUser = {
+                    id: 'admin_user1',
+                    username: 'AdminUser',
+                    avatar: null
+                };
+            } else {
+                mockDiscordUser = {
+                    id: 'discord_' + Math.random().toString(36).substr(2, 9),
+                    username: 'TestUser' + Math.floor(Math.random() * 1000),
+                    avatar: null
+                };
+            }
+            const existingUser = members.find(m => m.discordId === mockDiscordUser.id);
+            if (existingUser) {
+                currentUser = existingUser;
+                completeLogin();
+            } else {
+                showNotification('Discord授權成功！請完成首次設定', 'success');
+                document.getElementById('newUserForm').style.display = 'block';
+                currentUser = { discordId: mockDiscordUser.id, discordUsername: mockDiscordUser.username };
+            }
+        }, 2000);
+    }
+
+    // 完成註冊
+    function completeRegistration() {
+        const gameId = document.getElementById('gameId').value.trim();
+        const job = document.getElementById('jobSelect').value;
+        const loginType = document.getElementById('loginTypeSelect').value;
+        if (!gameId || !job) {
+            showNotification('請填寫所有必要資訊', 'error');
+            return;
+        }
+        if (members.find(m => m.id === gameId)) {
+            showNotification('此遊戲ID已存在', 'error');
+            return;
+        }
+        const newUser = {
+            id: gameId,
+            discordId: currentUser.discordId,
+            name: gameId,
+            job: job,
+            isAdmin: loginType === 'admin',
+            onLeave: false
+        };
+        members.push(newUser);
+        currentUser = newUser;
+        showNotification('註冊成功！', 'success');
+        completeLogin();
+    }
+
+    // 完成登入
+    function completeLogin() {
+        isLoggedIn = true;
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('mainNav').style.display = 'flex';
+        document.getElementById('userInfo').style.display = 'block';
+        document.getElementById('userName').textContent = currentUser.name;
+        document.getElementById('userJob').textContent = currentUser.job;
+        if (currentUser.isAdmin) {
+            document.getElementById('adminTab').style.display = 'block';
+        }
+        showTab('home');
+        updateUserInterface();
+    }
+
+    // 登出
+    function logout() {
+        currentUser = null;
+        isLoggedIn = false;
+        document.getElementById('loginPage').style.display = 'block';
+        document.getElementById('mainNav').style.display = 'none';
+        document.getElementById('userInfo').style.display = 'none';
+        document.getElementById('adminTab').style.display = 'none';
+        document.getElementById('newUserForm').style.display = 'none';
+        document.getElementById('gameId').value = '';
+        document.getElementById('jobSelect').value = '';
+        document.getElementById('loginTypeSelect').value = 'user';
+        showNotification('已成功登出', 'info');
+    }
+
+    // 顯示標籤
+    function showTab(tabName) {
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        const navTabs = document.querySelectorAll('.nav-tab');
+        navTabs.forEach(tab => tab.classList.remove('active'));
+        document.getElementById(tabName).classList.add('active');
+        event.target.classList.add('active');
+        switch (tabName) {
+            case 'home':
+                updateHomeContent();
+                break;
+            case 'records':
+                updateRecordsContent();
+                break;
+            case 'admin':
+                updateAdminContent();
+                break;
+        }
+    }
+
+    // 更新用戶界面
+    function updateUserInterface() {
+        updateHomeContent();
+        updateJobButtonGroup();
+        updateStats();
+    }
+
+    // 檢查報名截止時間
+    function isPastDeadline(battle) {
+        if (!battle.deadlineDate || !battle.deadlineTime) return false;
+        const deadline = new Date(`${battle.deadlineDate}T${battle.deadlineTime}:00`);
+        return new Date() > deadline;
+    }
+
+    // 更新首頁內容
+    function updateHomeContent() {
+        const statusDiv = document.getElementById('registrationStatus');
+        const dateDiv = document.getElementById('registrationDate');
+        const deadlineDiv = document.getElementById('registrationDeadline');
+        const teamAssignmentDiv = document.getElementById('teamAssignment');
+        const actionsDiv = document.getElementById('registrationActions');
+        const registerBtn = document.getElementById('registerBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const deadlineMessage = document.getElementById('deadlineMessage');
+
+        if (currentBattle) {
+            const userRegistered = registrations.find(r => r.userId === currentUser.id && r.battleDate === currentBattle.date && r.battleTime === currentBattle.time);
+            if (userRegistered) {
+                statusDiv.textContent = `✅ ${currentBattle.date} ${currentBattle.time} 已報名${userRegistered.isBackup ? '（備選名單）' : ''}`;
+                statusDiv.className = 'registration-status status-registered';
+                registerBtn.style.display = 'none';
+                cancelBtn.style.display = isPastDeadline(currentBattle) ? 'none' : 'inline-block';
+            } else {
+                statusDiv.textContent = `📢 ${currentBattle.date} ${currentBattle.time} 開放報名中`;
+                statusDiv.className = 'registration-status status-not-registered';
+                registerBtn.style.display = 'inline-block';
+                cancelBtn.style.display = 'none';
+            }
+            dateDiv.textContent = `幫戰時間: ${currentBattle.date} ${currentBattle.time}`;
+            deadlineDiv.textContent = currentBattle.deadlineDate ? `報名截止: ${currentBattle.deadlineDate} ${currentBattle.deadlineTime}` : '';
+            
+            // 顯示用戶所在小隊
+            if (currentBattle.formationPublished && currentBattle.formation) {
+                let assignedTeam = null;
+                currentBattle.formation.forEach((group, groupIndex) => {
+                    group.forEach(team => {
+                        if (team.slots.some(slot => slot.playerId === currentUser.id)) {
+                            assignedTeam = `您被分配到第${groupIndex + 1}團 ${team.team}`;
+                        }
+                    });
+                });
+                teamAssignmentDiv.textContent = assignedTeam || '您尚未被分配到任何小隊';
+            } else {
+                teamAssignmentDiv.textContent = '';
+            }
+
+            if (isPastDeadline(currentBattle)) {
+                deadlineMessage.style.display = 'block';
+                document.getElementById('leaveDeadlineMessage').style.display = 'block';
+                document.getElementById('leaveSubmitBtn').style.display = 'none';
+            } else {
+                deadlineMessage.style.display = 'none';
+                document.getElementById('leaveDeadlineMessage').style.display = 'none';
+                document.getElementById('leaveSubmitBtn').style.display = 'inline-block';
+            }
+        } else {
+            statusDiv.textContent = '目前沒有開放的幫戰報名';
+            statusDiv.className = 'registration-status status-not-registered';
+            dateDiv.textContent = '';
+            deadlineDiv.textContent = '';
+            teamAssignmentDiv.textContent = '';
+            registerBtn.style.display = 'none';
+            cancelBtn.style.display = 'none';
+            deadlineMessage.style.display = 'none';
+            document.getElementById('leaveDeadlineMessage').style.display = 'none';
+            document.getElementById('leaveSubmitBtn').style.display = 'inline-block';
+        }
+
+        if (currentBattle && currentBattle.formationPublished) {
+            document.getElementById('battleFormation').style.display = 'block';
+            displayFormation();
+        } else {
+            document.getElementById('battleFormation').style.display = 'none';
+        }
+    }
+
+    // 報名參戰
+    function registerForBattle() {
+        if (!currentBattle) {
+            showNotification('目前沒有開放的幫戰報名', 'error');
+            return;
+        }
+        const existingRegistration = registrations.find(r =>
+            r.userId === currentUser.id && r.battleDate === currentBattle.date && r.battleTime === currentBattle.time
+        );
+        if (existingRegistration) {
+            showNotification('您已經報名此次幫戰', 'error');
+            return;
+        }
+        const onLeave = leaveRequests.find(r =>
+            r.userId === currentUser.id &&
+            r.date === currentBattle.date &&
+            r.approved
+        );
+        if (onLeave) {
+            showNotification('您在此日期已請假，無法報名', 'error');
+            return;
+        }
+        const isBackup = isPastDeadline(currentBattle);
+        registrations.push({
+            userId: currentUser.id,
+            userName: currentUser.name,
+            userJob: currentUser.job,
+            battleDate: currentBattle.date,
+            battleTime: currentBattle.time,
+            registrationTime: new Date().toISOString(),
+            isBackup: isBackup
+        });
+        showNotification(isBackup ? '已超過報名時間，系統自動幫您排入備選名單' : '報名成功！', 'success');
+        updateHomeContent();
+        updateStats();
+        updateJobButtonGroup();
+    }
+
+    // 取消報名
+    function cancelRegistration() {
+        if (!currentBattle) return;
+        if (isPastDeadline(currentBattle)) {
+            showNotification('已超過報名截止時間，請直接DC聯絡指揮', 'error');
+            return;
+        }
+        const index = registrations.findIndex(r =>
+            r.userId === currentUser.id && r.battleDate === currentBattle.date && r.battleTime === currentBattle.time
+        );
+        if (index !== -1) {
+            registrations.splice(index, 1);
+            showNotification('已取消報名', 'info');
+            updateHomeContent();
+            updateStats();
+            updateJobButtonGroup();
+        }
+    }
+
+    // 更換職業申請
+    function submitJobChange() {
+        const newJob = document.getElementById('newJobSelect').value;
+        const reason = document.getElementById('jobChangeReason').value.trim();
+        if (!newJob || !reason) {
+            showNotification('請填寫所有欄位', 'error');
+            return;
+        }
+        if (newJob === currentUser.job) {
+            showNotification('新職業與目前職業相同', 'error');
+            return;
+        }
+        if (currentUser.isAdmin) {
+            currentUser.job = newJob;
+            const memberIndex = members.findIndex(m => m.id === currentUser.id);
+            if (memberIndex !== -1) {
+                members[memberIndex].job = newJob;
+            }
+            document.getElementById('userJob').textContent = newJob;
+            showNotification('職業更換成功！', 'success');
+        } else {
+            showNotification('職業更換申請已提交，等待管理員審核', 'info');
+        }
+        document.getElementById('newJobSelect').value = '';
+        document.getElementById('jobChangeReason').value = '';
+        updateJobButtonGroup();
+    }
+
+    // 代報名
+    function submitProxyRegistration() {
+        const proxyId = document.getElementById('proxyId').value.trim();
+        const reason = document.getElementById('proxyReason').value.trim();
+        if (!proxyId || !reason) {
+            showNotification('請填寫所有欄位', 'error');
+            return;
+        }
+        if (!currentBattle) {
+            showNotification('目前沒有開放的幫戰報名', 'error');
+            return;
+        }
+        const targetUser = members.find(m => m.id === proxyId);
+        if (!targetUser) {
+            showNotification('找不到該遊戲ID', 'error');
+            return;
+        }
+        const existingRegistration = registrations.find(r =>
+            r.userId === proxyId && r.battleDate === currentBattle.date && r.battleTime === currentBattle.time
+        );
+        if (existingRegistration) {
+            showNotification('該用戶已經報名此次幫戰', 'error');
+            return;
+        }
+        const isBackup = isPastDeadline(currentBattle);
+        registrations.push({
+            userId: proxyId,
+            userName: targetUser.name,
+            userJob: targetUser.job,
+            battleDate: currentBattle.date,
+            battleTime: currentBattle.time,
+            registrationTime: new Date().toISOString(),
+            proxyBy: currentUser.id,
+            proxyReason: reason,
+            isBackup: isBackup
+        });
+        showNotification(`已成功為 ${targetUser.name} 代報名${isBackup ? '（備選名單）' : ''}`, 'success');
+        document.getElementById('proxyId').value = '';
+        document.getElementById('proxyReason').value = '';
+        updateStats();
+        updateJobButtonGroup();
+    }
+
+    // 請假申請
+    function submitLeaveRequest() {
+        const leaveDate = document.getElementById('leaveDate').value;
+        const reason = document.getElementById('leaveReason').value.trim();
+        if (!leaveDate || !reason) {
+            showNotification('請填寫所有欄位', 'error');
+            return;
+        }
+        const battle = battles.find(b => b.date === leaveDate);
+        if (battle && isPastDeadline(battle)) {
+            showNotification('已超過報名截止時間，請直接DC聯絡指揮', 'error');
+            return;
+        }
+        const existingLeave = leaveRequests.find(r =>
+            r.userId === currentUser.id && r.date === leaveDate
+        );
+        if (existingLeave) {
+            showNotification('您在此日期已有請假記錄', 'error');
+            return;
+        }
+        leaveRequests.push({
+            userId: currentUser.id,
+            userName: currentUser.name,
+            date: leaveDate,
+            reason: reason,
+            approved: currentUser.isAdmin,
+            submitTime: new Date().toISOString()
+        });
+        if (currentUser.isAdmin) {
+            const memberIndex = members.findIndex(m => m.id === currentUser.id);
+            if (memberIndex !== -1 && leaveDate === (currentBattle?.date)) {
+                members[memberIndex].onLeave = true;
+            }
+            showNotification('請假申請已批准', 'success');
+        } else {
+            showNotification('請假申請已提交，等待管理員審核', 'info');
+        }
+        document.getElementById('leaveDate').value = '';
+        document.getElementById('leaveReason').value = '';
+        updateJobButtonGroup();
+    }
+
+    // 更新出勤記錄內容
+    function updateRecordsContent() {
+        const userRecords = attendanceRecords.filter(r => r.userId === currentUser.id);
+        const totalBattles = userRecords.length;
+        const attendedBattles = userRecords.filter(r => r.attended).length;
+        const attendanceRate = totalBattles > 0 ? Math.round((attendedBattles / totalBattles) * 100) : 0;
+        document.getElementById('attendanceRate').textContent = attendanceRate + '%';
+        document.getElementById('totalBattles').textContent = attendedBattles;
+        document.getElementById('absenceCount').textContent = totalBattles - attendedBattles;
+        let recordsHtml = '<h3>近期出勤記錄</h3>';
+        if (userRecords.length === 0) {
+            recordsHtml += '<p>暫無出勤記錄</p>';
+        } else {
+            recordsHtml += '<div class="records-list">';
+            userRecords.slice(-10).reverse().forEach(record => {
+                const statusClass = record.attended ? 'status-registered' : 'status-not-registered';
+                const statusText = record.attended ? '✅ 出席' : '❌ 缺席';
+                recordsHtml += `
+                    <div class="admin-section">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <strong>${record.battleDate} ${record.battleTime}</strong> - ${record.group ? `第${record.group}團 ` : ''}${record.team || '未分配'}
+                            </div>
+                            <div class="${statusClass}">${statusText}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            recordsHtml += '</div>';
+        }
+        document.getElementById('recordsList').innerHTML = recordsHtml;
+    }
+
+    // 管理員功能
+    function updateAdminContent() {
+        if (!currentUser?.isAdmin) return;
+        updateJobButtonGroup();
+        updateStats();
+    }
+
+    // 檢查未確認場次
+    function checkUnconfirmedBattles(newBattleDate) {
+        return battles.filter(b => !b.confirmed && b.date !== newBattleDate);
+    }
+
+    // 開放報名
+    function openRegistration() {
+        const battleDate = document.getElementById('battleDate').value;
+        const battleTime = document.getElementById('battleTime').value;
+        const deadlineDate = document.getElementById('deadlineDate').value;
+        const deadlineTime = document.getElementById('deadlineTime').value;
+        if (!battleDate || !battleTime || !deadlineDate || !deadlineTime) {
+            showNotification('請填寫所有必要欄位', 'error');
+            return;
+        }
+        const deadline = new Date(`${deadlineDate}T${deadlineTime}:00`);
+        const battle = new Date(`${battleDate}T${battleTime}:00`);
+        if (deadline >= battle) {
+            showNotification('報名截止時間必須早於幫戰時間', 'error');
+            return;
+        }
+        const unconfirmedBattles = checkUnconfirmedBattles(battleDate);
+        if (unconfirmedBattles.length > 0) {
+            const modalContent = `
+                <h3>提醒：未確認的場次</h3>
+                <p>以下場次尚未確認最終出戰表：</p>
+                <ul>
+                    ${unconfirmedBattles.map(b => `<li>${b.date} ${b.time}</li>`).join('')}
+                </ul>
+                <p>是否繼續開放新場次？</p>
+                <div style="margin-top: 20px;">
+                    <button onclick="showTab('admin'); showFormationEditor('confirm'); closeModal();" class="btn">前往確認</button>
+                    <button onclick="proceedOpenRegistration('${battleDate}', '${battleTime}', '${deadlineDate}', '${deadlineTime}'); closeModal();" class="btn btn-success">繼續開放</button>
+                </div>
+            `;
+            showModal(modalContent);
+        } else {
+            proceedOpenRegistration(battleDate, battleTime, deadlineDate, deadlineTime);
+        }
+    }
+
+    // 繼續開放報名
+    function proceedOpenRegistration(battleDate, battleTime, deadlineDate, deadlineTime) {
+        currentBattle = {
+            date: battleDate,
+            time: battleTime,
+            deadlineDate: deadlineDate,
+            deadlineTime: deadlineTime,
+            open: true,
+            formationPublished: false,
+            formation: [],
+            confirmed: false
+        };
+        battles.push(currentBattle);
+        battleFormation = [];
+        showNotification(`已開放 ${battleDate} ${battleTime} 的報名`, 'success');
+        updateHomeContent();
+        updateStats();
+        document.getElementById('battleDate').value = '';
+        document.getElementById('battleTime').value = '';
+        document.getElementById('deadlineDate').value = '';
+        document.getElementById('deadlineTime').value = '';
+    }
+
+    // 關閉報名
+    function closeRegistration() {
+        if (!currentBattle) {
+            showNotification('目前沒有開放的報名', 'error');
+            return;
+        }
+        currentBattle.open = false;
+        showNotification('已關閉當前報名', 'success');
+        updateHomeContent();
+    }
+
+    // 更新職業按鈕組
+    function updateJobButtonGroup() {
+        const container = document.getElementById('jobButtonGroup');
+        if (!container) return;
+        let html = '';
+        jobs.forEach(job => {
+            const registeredMembers = registrations
+                .filter(r => r.battleDate === currentBattle?.date && r.battleTime === currentBattle?.time)
+                .map(r => members.find(m => m.id === r.userId))
+                .filter(m => m && m.job === job);
+            html += `
+                <div>
+                    <button class="job-button" onclick="toggleJobMembers('job-${job}')">${job} (${registeredMembers.length})</button>
+                    <div id="job-${job}" class="job-members">
+                        ${registeredMembers.length ? registeredMembers.map(m => `
+                            <span class="member-id" onclick="selectMember('`\({m.id}')">\)`{m.id}${m.onLeave ? ' (請假)' : ''}</span>
+                        `).join('') : '<span style="font-size: 0.8em; color: #999;">無報名成員</span>'}
+                    </div>
+                </div>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    // 切換職業成員顯示
+    function toggleJobMembers(jobId) {
+        const element = document.getElementById(jobId);
+        const isActive = element.classList.contains('active');
+        document.querySelectorAll('.job-members').forEach(el => el.classList.remove('active'));
+        if (!isActive) {
+            element.classList.add('active');
+        }
+    }
+
+    // 選擇成員
+    function selectMember(memberId) {
+        const member = members.find(m => m.id === memberId);
+        if (!member) return;
+        const modalContent = `
+            <h3>成員資訊: ${member.name}</h3>
+            <p><strong>ID:</strong> ${member.id}</p>
+            <p><strong>職業:</strong> ${member.job}</p>
+            <p><strong>Discord:</strong> ${member.discordId}</p>
+            <p><strong>狀態:</strong> ${member.onLeave ? '請假中' : '正常'}</p>
+            <p><strong>權限:</strong> ${member.isAdmin ? '管理員' : '一般成員'}</p>
+            <div style="margin-top: 20px;">
+                <button onclick="toggleMemberLeave('${member.id}')" class="btn">
+                    ${member.onLeave ? '解除請假' : '設為請假'}
+                </button>
+                <button onclick="deleteMember('${member.id}')" class="btn btn-danger">刪除成員</button>
+            </div>
+        `;
+        showModal(modalContent);
+    }
+
+    // 切換成員請假狀態
+    function toggleMemberLeave(memberId) {
+        const memberIndex = members.findIndex(m => m.id === memberId);
+        if (memberIndex !== -1) {
+            members[memberIndex].onLeave = !members[memberIndex].onLeave;
+            updateJobButtonGroup();
+            closeModal();
+            showNotification('已更新成員狀態', 'success');
+        }
+    }
+
+    // 刪除成員
+    function deleteMember(memberId) {
+        if (memberId === currentUser.id) {
+            showNotification('不能刪除自己的帳號', 'error');
+            return;
+        }
+        const memberIndex = members.findIndex(m => m.id === memberId);
+        if (memberIndex !== -1) {
+            members.splice(memberIndex, 1);
+            updateJobButtonGroup();
+            updateStats();
+            closeModal();
+            showNotification('已刪除成員', 'success');
+        }
+    }
+
+    // 顯示出戰表編輯器
+    function showFormationEditor(mode = 'edit') {
+        if (!currentBattle) {
+            showNotification('請先開放報名', 'error');
+            return;
+        }
+        document.getElementById('formationEditor').style.display = 'block';
+        document.getElementById('confirmFormationBtn').style.display = mode === 'confirm' ? 'inline-block' : 'none';
+        generateFormation(mode);
+    }
+
+    // 生成出戰表
+    function generateFormation(mode) {
+        const container = document.getElementById('battleFormation');
+        if (!container) return;
+
+        // 初始化 battleFormation 或從 currentBattle.formation 載入
+        if (currentBattle.formationPublished && currentBattle.formation.length) {
+            battleFormation = JSON.parse(JSON.stringify(currentBattle.formation));
+        } else if (!battleFormation.length) {
+            battleFormation = Array(2).fill().map(() =>
+                Array(5).fill().map(() => ({
+                    team: '',
+                    slots: Array(6).fill({ job: '', playerId: '' })
+                }))
+            );
+        }
+
+        let html = '';
+        battleFormation.forEach((group, groupIndex) => {
+            html += `<h4>第${groupIndex + 1}團</h4>`;
+            html += `<table class="team-table">`;
+            html += `<thead><tr>`;
+            for (let teamIdx = 0; teamIdx < 5; teamIdx++) {
+                const teamSelectId = `team_${groupIndex}_${teamIdx}`;
+                html += `
+                    <th colspan="2">
+                        <select id="${teamSelectId}" onchange="updateTeamName(${groupIndex}, ${teamIdx})" ${mode === 'confirm' && !battleFormation[groupIndex][teamIdx].team ? '' : 'disabled'}>
+                            <option value="">選擇小隊</option>
+                            ${teamNames.map(name => `
+                                <option value="${name}" `\({battleFormation[groupIndex][teamIdx].team === name ? 'selected' : ''}>\)`{name}</option>
+                            `).join('')}
+                        </select>
+                    </th>
+                `;
+            }
+            html += `</tr></thead>`;
+            html += `<tbody>`;
+            for (let row = 0; row < 6; row++) {
+                html += `<tr>`;
+                for (let teamIdx = 0; teamIdx < 5; teamIdx++) {
+                    const jobSelectId = `job_${groupIndex}_${teamIdx}_${row}`;
+                    const playerSelectId = `player_${groupIndex}_${teamIdx}_${row}`;
+                    const slot = battleFormation[groupIndex][teamIdx].slots[row];
+                    html += `
+                        <td>
+                            <select id="${jobSelectId}" onchange="updateFormationCell('${jobSelectId}', '${playerSelectId}', ${groupIndex}, ${teamIdx}, ${row})">
+                                <option value="">選擇職業</option>
+                                ${jobs.map(job => `<option value="${job}" `\({slot.job === job ? 'selected' : ''}>\)`{job}</option>`).join('')}
+                            </select>
+                        </td>
+                        <td>
+                            <select id="${playerSelectId}" ${slot.job ? '' : 'disabled'}>
+                                <option value="">選擇玩家</option>
+                                ${slot.job ? members
+                                    .filter(m => m.job === slot.job && !m.onLeave && registrations.some(r => r.userId === m.id && r.battleDate === currentBattle.date && r.battleTime === currentBattle.time))
+                                    .map(m => `<option value="${m.id}" `\({slot.playerId === m.id ? 'selected' : ''}>\)`{m.name}</option>`).join('') : ''}
+                            </select>
+                        </td>
+                    `;
+                }
+                html += `</tr>`;
+            }
+            html += `</tbody></table>`;
+        });
+        container.innerHTML = html;
+    }
+
+    // 更新小隊名稱
+    function updateTeamName(groupIndex, teamIndex) {
+        const select = document.getElementById(`team_${groupIndex}_${teamIndex}`);
+        battleFormation[groupIndex][teamIndex].team = select.value;
+    }
+
+    // 更新出戰表格子
+    function updateFormationCell(jobSelectId, playerSelectId, groupIndex, teamIndex, slotIndex) {
+        const jobSelect = document.getElementById(jobSelectId);
+        const playerSelect = document.getElementById(playerSelectId);
+        const selectedJob = jobSelect.value;
+        battleFormation[groupIndex][teamIndex].slots[slotIndex].job = selectedJob;
+        battleFormation[groupIndex][teamIndex].slots[slotIndex].playerId = '';
+        if (selectedJob) {
+            const availablePlayers = members
+                .filter(m => m.job === selectedJob && !m.onLeave && registrations.some(r => r.userId === m.id && r.battleDate === currentBattle.date && r.battleTime === currentBattle.time));
+            let options = '<option value="">選擇玩家</option>';
+            availablePlayers.forEach(player => {
+                options += `<option value="${player.id}">${player.name}</option>`;
+            });
+            playerSelect.innerHTML = options;
+            playerSelect.disabled = false;
+            playerSelect.onchange = () => {
+                battleFormation[groupIndex][teamIndex].slots[slotIndex].playerId = playerSelect.value;
+            };
+        } else {
+            playerSelect.innerHTML = '<option value="">選擇玩家</option>';
+            playerSelect.disabled = true;
+        }
+    }
+
+    // 發佈出戰表
+    function publishFormation() {
+        if (!currentBattle) {
+            showNotification('請先開放報名', 'error');
+            return;
+        }
+        // 檢查小隊名稱是否選擇
+        let hasEmptyTeam = false;
+        battleFormation.forEach(group => {
+            group.forEach(team => {
+                if (team.slots.some(slot => slot.job || slot.playerId) && !team.team) {
+                    hasEmptyTeam = true;
+                }
+            });
+        });
+        if (hasEmptyTeam) {
+            showNotification('請為所有有分配的小隊選擇名稱', 'error');
+            return;
+        }
+        // 檢查重複分配的玩家
+        const assignedPlayers = new Set();
+        let hasDuplicates = false;
+        battleFormation.forEach(group => {
+            group.forEach(team => {
+                team.slots.forEach(slot => {
+                    if (slot.playerId && assignedPlayers.has(slot.playerId)) {
+                        hasDuplicates = true;
+                    } else if (slot.playerId) {
+                        assignedPlayers.add(slot.playerId);
+                    }
+                });
+            });
+        });
+        if (hasDuplicates) {
+            showNotification('出戰表中存在重複分配的玩家，請檢查後重新發佈', 'error');
+            return;
+        }
+        currentBattle.formation = JSON.parse(JSON.stringify(battleFormation));
+        currentBattle.formationPublished = true;
+        showNotification('出戰表已發佈！已通知所有參戰成員', 'success');
+        document.getElementById('formationEditor').style.display = 'none';
+        updateHomeContent();
+    }
+
+    // 確認最終出戰表
+    function confirmFinalFormation() {
+        if (!currentBattle || !currentBattle.formationPublished) {
+            showNotification('請先發佈出戰表', 'error');
+            return;
+        }
+        // 檢查小隊名稱是否選擇
+        let hasEmptyTeam = false;
+        battleFormation.forEach(group => {
+            group.forEach(team => {
+                if (team.slots.some(slot => slot.job || slot.playerId) && !team.team) {
+                    hasEmptyTeam = true;
+                }
+            });
+        });
+        if (hasEmptyTeam) {
+            showNotification('請為所有有分配的小隊選擇名稱', 'error');
+            return;
+        }
+        // 檢查重複分配的玩家
+        const assignedPlayers = new Set();
+        let hasDuplicates = false;
+        battleFormation.forEach(group => {
+            group.forEach(team => {
+                team.slots.forEach(slot => {
+                    if (slot.playerId && assignedPlayers.has(slot.playerId)) {
+                        hasDuplicates = true;
+                    } else if (slot.playerId) {
+                        assignedPlayers.add(slot.playerId);
+                    }
+                });
+            });
+        });
+        if (hasDuplicates) {
+            showNotification('出戰表中存在重複分配的玩家，請檢查後重新確認', 'error');
+            return;
+        }
+        // 更新 formation
+        currentBattle.formation = JSON.parse(JSON.stringify(battleFormation));
+        const battleRegistrations = registrations.filter(r => r.battleDate === currentBattle.date && r.battleTime === currentBattle.time && !r.isBackup);
+        battleRegistrations.forEach(reg => {
+            let playerGroup = null;
+            let playerTeam = null;
+            currentBattle.formation.forEach((group, groupIndex) => {
+                group.forEach(team => {
+                    if (team.slots.some(slot => slot.playerId === reg.userId)) {
+                        playerGroup = groupIndex + 1;
+                        playerTeam = team.team;
+                    }
+                });
+            });
+            attendanceRecords.push({
+                userId: reg.userId,
+                userName: reg.userName,
+                battleDate: currentBattle.date,
+                battleTime: currentBattle.time,
+                attended: true,
+                group: playerGroup,
+                team: playerTeam || '未分配'
+            });
+        });
+        currentBattle.confirmed = true;
+        showNotification('已確認最終出戰表，出勤記錄已生成', 'success');
+        document.getElementById('formationEditor').style.display = 'none';
+        updateRecordsContent();
+        updateHomeContent();
+    }
+
+    // 顯示出戰表（首頁只讀版本）
+    function displayFormation() {
+        const container = document.getElementById('formationDisplay');
+        if (!container || !currentBattle.formation) return;
+        let html = '';
+        currentBattle.formation.forEach((group, groupIndex) => {
+            html += `<h4>第${groupIndex + 1}團</h4>`;
+            group.forEach(team => {
+                const filledSlots = team.slots.filter(slot => slot.job && slot.playerId);
+                if (filledSlots.length === 0 || !team.team) return;
+                html += `
+                    <div class="battle-formation">
+                        <h5>${team.team}</h5>
+                        <table class="team-table readonly">
+                            <thead>
+                                <tr>
+                                    <th>職業</th>
+                                    <th>玩家</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+                filledSlots.forEach(slot => {
+                    const player = members.find(m => m.id === slot.playerId);
+                    html += `
+                        <tr>
+                            <td>${slot.job}</td>
+                            <td>${player ? player.name : '-'}</td>
+                        </tr>
+                    `;
+                });
+                html += `
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            });
+        });
+        container.innerHTML = html || '<p>出戰表尚未分配任何成員</p>';
+    }
+
+    // 更新統計數據
+    function updateStats() {
+        const totalMembersEl = document.getElementById('totalMembers');
+        if (totalMembersEl) {
+            totalMembersEl.textContent = members.length;
+        }
+        const registeredCountEl = document.getElementById('registeredCount');
+        if (registeredCountEl && currentBattle) {
+            const count = registrations.filter(r => r.battleDate === currentBattle.date && r.battleTime === currentBattle.time).length;
+            registeredCountEl.textContent = count;
+        }
+        const onLeaveCountEl = document.getElementById('onLeaveCount');
+        if (onLeaveCountEl) {
+            const count = members.filter(m => m.onLeave).length;
+            onLeaveCountEl.textContent = count;
+        }
+    }
+
+    // 顯示模態框
+    function showModal(content) {
+        document.getElementById('modalContent').innerHTML = content;
+        document.getElementById('modal').classList.add('active');
+    }
+
+    // 關閉模態框
+    function closeModal() {
+        document.getElementById('modal').classList.remove('active');
+    }
+
+    // 顯示通知
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        setTimeout(() => {
+            notification.remove();
+        }, 3000);
+    }
+
+    // 點擊模態框外部關閉
+    document.getElementById('modal').addEventListener('click', function (e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    // 初始化系統
+    document.addEventListener('DOMContentLoaded', function () {
+        initSystem();
+    });
+</script>
